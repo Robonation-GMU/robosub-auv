@@ -1,0 +1,47 @@
+# ROS 2 / colcon build output
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# C++
+*.o
+*.so
+*.a
+
+# Large data (store on the shared drive instead)
+*.bag
+*.db3
+*.mcap
+*.svo
+*.svo2
+*.mp4
+*.avi
+*.mov
+datasets/
+models/**/*.pt
+models/**/*.onnx
+models/**/*.engine
+runs/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
