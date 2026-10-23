@@ -43,13 +43,62 @@ You now have the whole repo as a folder on your laptop. The first time you push,
 ```
 git checkout main
 git pull                                  # get teammates' latest work
-git checkout -b sneaks/zed-camera-test    # make your own branch
+git checkout -b yourname/zed-camera-test    # make your own branch
 # ...edit or add files...
 git add .
 git commit -m "Add ZED frame grab script"
-git push -u origin sneaks/zed-camera-test
+git push -u origin yourname/zed-camera-test
 ```
+
+What each line does:
+
+| Command | What it means |
+|---------|---------------|
+| `git checkout main` | Switch to the `main` branch, the team's shared, working version. You start new work from here. |
+| `git pull` | Download the newest changes from GitHub so you aren't building on an old copy. |
+| `git checkout -b yourname/zed-camera-test` | Create a new branch and switch to it (`-b` means "make a new branch"). This is your own copy of the repo, so your changes don't touch `main`. Name it `yourname/what-you-are-doing`. |
+| *edit or add files* | Work normally in the folder: write code, add notes. |
+| `git add .` | Choose which changes go into your next save. The `.` means everything in this folder. |
+| `git commit -m "..."` | Save a snapshot of those changes on your laptop. `-m` adds a message describing what you did. Nothing is online yet. |
+| `git push -u origin yourname/zed-camera-test` | Upload your branch to GitHub. `origin` is the nickname for the GitHub repo, and `-u` remembers the link so next time plain `git push` works. |
+
 Then on github.com, click **Compare & pull request**, ask a teammate to review, and merge it.
+
+## Switching branches
+
+You only use `-b` once, when you first **create** a branch. To move between branches that already exist, leave it off:
+```
+git checkout -b yourname/zed-notes   # first time: create it and switch to it
+git checkout main                    # switch back to main
+git checkout yourname/zed-notes      # back to your existing branch (no -b)
+```
+- If Git says `a branch named '...' already exists`, drop the `-b`.
+- When you switch to `main`, files from your branch seem to disappear. They're safe on your branch and come back when you switch to it.
+- Once a branch is pushed with `-u`, later pushes from it are just `git push`.
+
+## Adding specific files
+
+`git add .` adds everything. To pick files, put their paths after `git add` instead of the dot. Paths start from the folder you're in (usually the repo's top folder):
+```
+git add README.md                                   # one file
+git add docs/git-basics.md docs/hardware/zed2i.md   # several files, separated by spaces
+git add docs/hardware/                              # everything inside one folder
+```
+- Run `git status` first. It lists changed files with their exact paths.
+- Press **Tab** while typing a path and Git Bash fills in the rest.
+- Added something by mistake? `git restore --staged <file>` takes it back out. Your file isn't changed.
+- Run `git status` again before committing: green files go in, red ones don't.
+
+## Common errors
+
+| What you see | What it means and how to fix it |
+|--------------|---------------------------------|
+| `fatal: protocol 'https' is not supported` | A hidden character got pasted before `https`. Retype `https://` by hand, and paste with right-click or Shift+Insert, not Ctrl+V. |
+| `error: pathspec '...' did not match any file(s)` on commit | You forgot `-m`. Use `git commit -m "your message"`. |
+| `! [rejected] ... (fetch first)` on push | GitHub has changes you don't have yet. Run `git pull --no-rebase`, then `git push`. |
+| A strange text screen asking for a merge message | That's the Vim editor. Type `:wq` and press Enter. |
+| `warning: ... LF will be replaced by CRLF` | Just a warning about Windows vs Linux line endings. Safe to ignore. |
+| `CONFLICT` after a pull | You and someone else changed the same lines. Ask for help the first few times. |
 
 ## Handy commands
 
