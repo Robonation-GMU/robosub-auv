@@ -25,7 +25,7 @@ Software, research notes, and hardware documentation for George Mason University
 
 ## Roadmap
 
-- [ ] Connect ZED 2i and webcam to the Jetson and grab frames
+- [ ] Connect ZED 2i and webcam to the Jetson
 - [ ] Talk to the Pixhawk from the Jetson over MAVLink (read heartbeat and telemetry)
 - [ ] Install ROS 2 on the Jetson and publish camera images as a topic
 - [ ] Detect a gate or colored target with OpenCV
