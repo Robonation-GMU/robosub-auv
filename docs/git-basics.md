@@ -43,11 +43,11 @@ You now have the whole repo as a folder on your laptop. The first time you push,
 ```
 git checkout main
 git pull                                  # get teammates' latest work
-git checkout -b sneaks/zed-camera-test    # make your own branch
+git checkout -b yourname/zed-camera-test    # make your own branch
 # ...edit or add files...
 git add .
 git commit -m "Add ZED frame grab script"
-git push -u origin sneaks/zed-camera-test
+git push -u origin yourname/zed-camera-test
 ```
 Then on github.com, click **Compare & pull request**, ask a teammate to review, and merge it.
 
