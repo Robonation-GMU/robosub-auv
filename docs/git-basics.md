@@ -12,57 +12,31 @@ A step-by-step guide to putting files on GitHub yourself.
 your files → git add → git commit → git push → GitHub
 ```
 
-## One-time setup
+## One-time setup (every member)
 
-### 1. Install Git
+### 1. Get access
+Make a free GitHub account and send your username to a team lead, who will add you to the **Robonation-GMU** organization. Accept the email invite.
+
+### 2. Install Git
 Download from https://git-scm.com/download/win and install with the default options. This also installs **Git Bash**, a terminal you can use for every command below (PowerShell works too).
 
-### 2. Tell Git who you are
-Open Git Bash and run (use the email on your GitHub account):
+> Pasting in Git Bash: use **right-click → Paste** or **Shift+Insert**. Ctrl+V can sneak in a hidden character and cause `fatal: protocol 'https' is not supported`.
+
+### 3. Tell Git who you are
+Open Git Bash and run, with your own name and the email on your GitHub account (keep the quotes):
 ```
-git config --global user.name "Your Name"
+git config --global user.name "First Last"
 git config --global user.email "you@example.com"
 ```
+This only labels your commits. It is not a login.
 
-### 3. Create the empty repo on GitHub
-On github.com click **New repository**, name it (e.g. `robosub-auv`), and leave README, .gitignore and license **unchecked**. Click **Create**. Copy the URL it shows, like `https://github.com/gmu-robosub/robosub-auv.git`.
-
-## Put the starter files on GitHub
-
-### 4. Download the repo to your laptop (clone)
+### 4. Download the repo (clone)
 ```
 cd ~/Documents
-git clone https://github.com/gmu-robosub/robosub-auv.git
+git clone https://github.com/Robonation-GMU/robosub-auv.git
 cd robosub-auv
 ```
-Git may warn that you cloned an empty repository. That's expected.
-
-### 5. Copy the files in
-Unzip the starter files and copy everything inside `robosub-starter/` into your `robosub-auv` folder. Include the hidden ones: `.gitignore` and the `.github` folder. (In File Explorer: View → Show → Hidden items.)
-
-### 6. See what Git noticed
-```
-git status
-```
-Files in red are new or changed but not yet staged.
-
-### 7. Stage the files (choose what goes in the snapshot)
-```
-git add .
-```
-The `.` means "everything in this folder." Run `git status` again and they turn green.
-
-### 8. Commit (take the snapshot)
-```
-git commit -m "Add starter folder structure and docs"
-```
-
-### 9. Push to GitHub
-```
-git branch -M main
-git push -u origin main
-```
-The first time, a browser window opens asking you to sign in to GitHub. After that, refresh the repo page on github.com and your files are there.
+You now have the whole repo as a folder on your laptop. The first time you push, a browser window asks you to sign in to GitHub.
 
 ## Everyday workflow after that
 
