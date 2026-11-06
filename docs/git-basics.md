@@ -1,4 +1,4 @@
-# Git and GitHub basics (Windows, sorry I don't have Linux setup rn!)
+# Git and GitHub basics (Windows Only, sorry I don't have Linux setup rn!)
 
 A step-by-step guide to putting files on GitHub yourself.
 
