@@ -6,15 +6,15 @@ Software, research notes, and hardware documentation for George Mason University
 
 | Folder | What goes there |
 |--------|-----------------|
-| `docs/research/` | Notes on technologies we are learning (one file per topic) |
-| `docs/hardware/` | Setup steps, wiring, and gotchas for each piece of hardware |
+| `docs/research/` | Notes on technologies we are learning |
+| `docs/hardware/` | Setup steps and wiring for each piece of hardware |
 | `docs/competition/` | RoboSub rules, tasks, and strategy notes |
-| `docs/meeting-notes/` | Dated notes from team meetings |
+| `docs/meeting-notes/` | Archive for presentations and notes from team meetings |
 | `experiments/` | Small standalone scripts to test one thing (a camera, a detector, a MAVLink message) |
 | `ros2_ws/src/` | Vehicle code as ROS 2 packages (later on, once experiments work) |
 | `scripts/` | Helper scripts (install, setup, launch) |
 | `config/` | Parameter files, ArduSub parameter backups, calibration files |
-| `models/` | Notes on trained models (large weight files are not committed) |
+| `models/` | Notes on trained models (do NOT commit an entire model) |
 
 ## Getting started
 
