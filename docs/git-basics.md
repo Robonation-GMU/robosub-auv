@@ -1,4 +1,4 @@
-# Git and GitHub basics (Windows)
+# Git and GitHub basics (Windows, sorry I don't have Linux setup rn!)
 
 A step-by-step guide to putting files on GitHub yourself.
 
@@ -12,10 +12,10 @@ A step-by-step guide to putting files on GitHub yourself.
 your files → git add → git commit → git push → GitHub
 ```
 
-## One-time setup (every member)
+## One-time setup
 
 ### 1. Get access
-Make a free GitHub account and send your username to a team lead, who will add you to the **Robonation-GMU** organization. Accept the email invite.
+Make a free GitHub account (any email) and send your username to a team lead, who will add you to the **Robonation-GMU** organization. Accept the email invite.
 
 ### 2. Install Git
 Download from https://git-scm.com/download/win and install with the default options. This also installs **Git Bash**, a terminal you can use for every command below (PowerShell works too).
@@ -28,7 +28,7 @@ Open Git Bash and run, with your own name and the email on your GitHub account (
 git config --global user.name "First Last"
 git config --global user.email "you@example.com"
 ```
-This only labels your commits. It is not a login.
+This labels your commits. 
 
 ### 4. Download the repo (clone)
 ```
@@ -38,7 +38,7 @@ cd robosub-auv
 ```
 You now have the whole repo as a folder on your laptop. The first time you push, a browser window asks you to sign in to GitHub.
 
-## Everyday workflow after that
+## Typical workflow after that
 
 ```
 git checkout main
@@ -96,11 +96,8 @@ git add docs/hardware/                              # everything inside one fold
 | `fatal: protocol 'https' is not supported` | A hidden character got pasted before `https`. Retype `https://` by hand, and paste with right-click or Shift+Insert, not Ctrl+V. |
 | `error: pathspec '...' did not match any file(s)` on commit | You forgot `-m`. Use `git commit -m "your message"`. |
 | `! [rejected] ... (fetch first)` on push | GitHub has changes you don't have yet. Run `git pull --no-rebase`, then `git push`. |
-| A strange text screen asking for a merge message | That's the Vim editor. Type `:wq` and press Enter. |
-| `warning: ... LF will be replaced by CRLF` | Just a warning about Windows vs Linux line endings. Safe to ignore. |
-| `CONFLICT` after a pull | You and someone else changed the same lines. Ask for help the first few times. |
 
-## Handy commands
+## Useful commands
 
 | Command | What it does |
 |---------|--------------|
@@ -110,7 +107,3 @@ git add docs/hardware/                              # everything inside one fold
 | `git branch` | Which branch you're on |
 | `git checkout <branch>` | Switch branches |
 | `git pull` | Download new commits from GitHub |
-
-## If you prefer clicking
-
-**GitHub Desktop** (https://desktop.github.com) does all of the above with buttons. It's fine to start there, but learning the commands pays off on the Jetson, which has no GitHub Desktop.
