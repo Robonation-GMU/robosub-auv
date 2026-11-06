@@ -31,10 +31,10 @@ This is a student team and most of us are learning as we go. Asking questions is
 
 ## Rules of thumb
 
-- **No secrets.** Never commit passwords, Wi-Fi keys, or API tokens.
-- **No large files.** Videos, datasets, rosbags, and model weights go in the team's shared drive. Put a link in a README instead.
+- **No personal and confidential info.** Passwords, logins, etc.
+- **No large files.** Videos, datasets, rosbags, and model weights go in the team's shared onedrive. Put a link to it in a README instead.
 - **Write down what you learn.** If something took you an hour to figure out, a short note saves the next person that hour.
-- **Use issues for tasks.** If you find a problem or have an idea, open an issue so it isn't lost.
+- **Use issues for tasks.** If you find a problem or have an idea, open an issue so it nobody forgets it.
 
 ## Commit message style
 
